@@ -1,0 +1,41 @@
+{
+  "name": "hyperf-plus/devtool",
+  "description": "hyperf-plus-admin可选的开发工具插件",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "毛自豪",
+      "email": "4213509@qq.com"
+    }
+  ],
+  "homepage": "https://github.com/hyperf-plus/devtool",
+  "keywords": [
+    "hyperf",
+    "Admin",
+    "permission",
+    "Vue"
+  ],
+  "require": {
+    "php": ">=7.3",
+    "ext-swoole": ">=4.5",
+    "hyperf/command": "^2.0.0",
+    "nette/php-generator": "^3.3",
+    "hyperf/db-connection": "~2.1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "HPlus\\DevTool\\": "src/"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "suggest": {
+    "hyperf/admin": "Required to use AbstractAdminController"
+  },
+  "extra": {
+    "hyperf": {
+      "config": "HPlus\\DevTool\\ConfigProvider"
+    }
+  }
+}
