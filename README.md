@@ -2,7 +2,9 @@
 ## hyperf 开发工具  gen:admin 
 
 # 安装 
-```php  composer require hyperf-plus/devtool --dev```
+```php  
+composer require hyperf-plus/devtool --dev
+```
 
 ### 建好表后，需要先执行```php bin/hyperf.php gen:model```表名 创建模型，
 ### 然后执行  ``` php bin/hyperf.php gen:admin ``` 模型名 
