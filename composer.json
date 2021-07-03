@@ -18,9 +18,7 @@
   "require": {
     "php": ">=7.3",
     "ext-swoole": ">=4.5",
-    "hyperf/command": "^2.0.0",
-    "nette/php-generator": "^3.3",
-    "hyperf/db-connection": "~2.1.0"
+    "nette/php-generator": "^3.3"
   },
   "autoload": {
     "psr-4": {
@@ -31,7 +29,9 @@
     ]
   },
   "suggest": {
-    "hyperf/admin": "Required to use AbstractAdminController"
+    "hyperf/admin": "Required to use AbstractAdminController",
+    "hyperf/command": "^2.2.*",
+    "hyperf/db-connection": "~2.2.*"
   },
   "extra": {
     "hyperf": {
