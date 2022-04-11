@@ -114,7 +114,7 @@ class ValidateCommand extends GeneratorCommand
         $scene['update'] = $sceneTmp;
         $scene['delete'] = 'id';
         $scene['list'] = ['limit', 'page'];
-        $class_name = str_underline_upper($class_name) . 'Validate';
+        $class_name = convert_underline($class_name) . 'Validate';
         $namespacePath = $namespaceInput ?? $this->getValidateNamespace();
         $namespace = new PhpNamespace($namespacePath);
         $namespace->addUse('HPlus\Validate\Validate');
