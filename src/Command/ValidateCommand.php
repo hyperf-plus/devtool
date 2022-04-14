@@ -258,7 +258,7 @@ class ValidateCommand extends GeneratorCommand
     {
         $class = Arr::last(explode('\\', static::class));
         $class = Str::replaceLast('Command', '', $class);
-        $key = 'admindev.generator.controller';
+        $key = 'admindev.generator.' . Str::snake($class, '.');
         return $this->getContainer()->get(ConfigInterface::class)->get($key) ?? [];
     }
 
