@@ -37,6 +37,7 @@ use Nette\PhpGenerator\PsrPrinter;
 /**
  * @Command
  */
+#[Command]
 class AdminCommand extends GeneratorCommand
 {
 

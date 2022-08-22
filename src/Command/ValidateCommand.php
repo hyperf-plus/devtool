@@ -39,6 +39,7 @@ use Nette\PhpGenerator\PsrPrinter;
 /**
  * @Command
  */
+#[Command]
 class ValidateCommand extends GeneratorCommand
 {
 
@@ -114,7 +115,7 @@ class ValidateCommand extends GeneratorCommand
         $scene['update'] = $sceneTmp;
         $scene['delete'] = 'id';
         $scene['list'] = ['limit', 'page'];
-        $class_name = convert_underline($class_name) . 'Validate';
+        $class_name = Str::studly($class_name) . 'Validate';
         $namespacePath = $namespaceInput ?? $this->getValidateNamespace();
         $namespace = new PhpNamespace($namespacePath);
         $namespace->addUse('HPlus\Validate\Validate');
