@@ -49,15 +49,17 @@ class EntityCommand extends HyperfCommand
 
         if(!empty($data)){
             foreach ($data as $value){
-                $class->addProperty(strtolower(substr($value,0,1)).substr($this->getUcwords($value),1));
+
+                $property = strtolower(substr($value,0,1)).substr($this->getUcwords($value),1);
+                $class->addProperty($property);
 
                 $grid = new Method('set'.$this->getUcwords($value));
-                $grid->setPublic()->setBody("\n \$this->$value = \$$value;\n")->addParameter($value);
+                $grid->setPublic()->setBody("\n \$this->$property = \$$value;\n")->addParameter($value);
                 $class->addMember($grid);
 
 
                 $grid = new Method('get'.$this->getUcwords($value));
-                $grid->setPublic()->setBody("\n return \$this->$value;\n");
+                $grid->setPublic()->setBody("\n return \$this->$property;\n");
                 $class->addMember($grid);
 
             }
