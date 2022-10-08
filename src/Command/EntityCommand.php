@@ -54,7 +54,7 @@ class EntityCommand extends HyperfCommand
                 $class->addProperty($property);
 
                 $grid = new Method('set'.$this->getUcwords($value));
-                $grid->setPublic()->setBody("\n \$this->$property = \$$value;\n")->addParameter($value);
+                $grid->setPublic()->setBody("\n \$this->$property = \$$property;\n")->addParameter($property);
                 $class->addMember($grid);
 
 
