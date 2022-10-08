@@ -37,9 +37,9 @@ class EntityCommand extends HyperfCommand
 
     public function handle()
     {
-        $className = $this->input->getOption('class') ?? '';
-        $namespace = $this->input->getOption('namespace') ?? '';
-        $path = $this->input->getOption('path') ?? '';
+        $className = trim($this->input->getOption('class') ?? '');
+        $namespace = trim($this->input->getOption('namespace') ?? '');
+        $path = trim($this->input->getOption('path') ?? '');
         $data = $this->input->getOption('data') ?? '';
 
 
